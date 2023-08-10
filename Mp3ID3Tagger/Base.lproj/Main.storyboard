@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Application-->
+        <scene sceneID="JPo-4y-FX3">
+            <objects>
+                <application id="hnw-xV-0zn" sceneMemberID="viewController">
+                    <menu key="mainMenu" title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
+                        <items>
+                            <menuItem title="Mp3ID3Tagger" id="1Xt-HY-uBw">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="Mp3ID3Tagger" systemMenu="apple" id="uQy-DD-JDr">
+                                    <items>
+                                        <menuItem title="About Mp3ID3Tagger" id="5kV-Vb-QxS">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="orderFrontStandardAboutPanel:" target="Ady-hI-5gd" id="Exp-CZ-Vem"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
+                                        <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW"/>
+                                        <menuItem isSeparatorItem="YES" id="wFC-TO-SCJ"/>
+                                        <menuItem title="Services" id="NMo-om-nkz">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <menu key="submenu" title="Services" systemMenu="services" id="hz9-B4-Xy5"/>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="4je-JR-u6R"/>
+                                        <menuItem title="Hide Mp3ID3Tagger" keyEquivalent="h" id="Olw-nP-bQN">
+                                            <connections>
+                                                <action selector="hide:" target="Ady-hI-5gd" id="PnN-Uc-m68"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Hide Others" keyEquivalent="h" id="Vdr-fp-XzO">
+                                            <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                                            <connections>
+                                                <action selector="hideOtherApplications:" target="Ady-hI-5gd" id="VT4-aY-XCT"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Show All" id="Kd2-mp-pUS">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="unhideAllApplications:" target="Ady-hI-5gd" id="Dhg-Le-xox"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="kCx-OE-vgT"/>
+                                        <menuItem title="Quit Mp3ID3Tagger" keyEquivalent="q" id="4sb-4s-VLi">
+                                            <connections>
+                                                <action selector="terminate:" target="Ady-hI-5gd" id="Te7-pn-YzF"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                            <menuItem title="File" id="dMs-cI-mzQ">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="File" id="bib-Uj-vzu">
+                                    <items>
+                                        <menuItem title="Open…" keyEquivalent="o" id="IAo-SY-fd9">
+                                            <connections>
+                                                <action selector="open:" target="Ady-hI-5gd" id="0eZ-XX-683"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Open Recent" id="tXI-mr-wws">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <menu key="submenu" title="Open Recent" systemMenu="recentDocuments" id="oas-Oc-fiZ">
+                                                <items>
+                                                    <menuItem title="Clear Menu" id="vNY-rz-j42">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                        <connections>
+                                                            <action selector="clearRecentDocuments:" target="Ady-hI-5gd" id="Daa-9d-B3U"/>
+                                                        </connections>
+                                                    </menuItem>
+                                                </items>
+                                            </menu>
+                                        </menuItem>
+                                        <menuItem title="Save..." keyEquivalent="s" id="fJ0-Lo-ezp">
+                                            <connections>
+                                                <action selector="save:" target="Ady-hI-5gd" id="KJd-LQ-TXo"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                            <menuItem title="Help" id="wpr-3q-Mcd">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="Help" systemMenu="help" id="F2S-fz-NVQ">
+                                    <items>
+                                        <menuItem title="Contact the author" keyEquivalent="?" id="FKE-Sm-Kum">
+                                            <connections>
+                                                <action selector="showHelp:" target="Voe-Tx-rLC" id="56n-fZ-Rya"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                        </items>
+                    </menu>
+                    <connections>
+                        <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
+                    </connections>
+                </application>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Mp3ID3Tagger" customModuleProvider="target"/>
+                <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
+                <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="87" y="30"/>
+        </scene>
+        <!--Window Controller-->
+        <scene sceneID="R2V-B0-nI4">
+            <objects>
+                <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
+                    <window key="window" title="Mp3ID3Tagger" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                        <windowCollectionBehavior key="collectionBehavior" fullScreenNone="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="196" y="240" width="750" height="355"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                        <value key="minSize" type="size" width="750" height="355"/>
+                        <value key="maxSize" type="size" width="900" height="355"/>
+                        <connections>
+                            <outlet property="delegate" destination="B8D-0N-5wS" id="98r-iN-zZc"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
+                    </connections>
+                </windowController>
+                <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="86" y="343"/>
+        </scene>
+        <!--Mp3ID3 Tagger View Controller-->
+        <scene sceneID="hIz-AP-VOD">
+            <objects>
+                <viewController id="XfG-lQ-9wD" customClass="Mp3ID3TaggerViewController" customModule="Mp3ID3Tagger" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
+                        <rect key="frame" x="0.0" y="0.0" width="900" height="355"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="tgm-CL-1Uo">
+                                <rect key="frame" x="350" y="181" width="530" height="22"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="hHh-aK-Lvw">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="DIC-4c-LPe">
+                                <rect key="frame" x="350" y="235" width="530" height="22"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="CjF-Nh-Rb1">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="wtl-1R-ycl">
+                                <rect key="frame" x="348" y="262" width="534" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Title" id="LIQ-41-dRm">
+                                    <font key="font" metaFont="systemSemibold" size="13"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="KBI-AK-aSc">
+                                <rect key="frame" x="348" y="208" width="534" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Artist" id="wF3-Rh-boM">
+                                    <font key="font" metaFont="systemSemibold" size="13"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="UT8-Da-Rcj">
+                                <rect key="frame" x="348" y="318" width="534" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Version" id="3zE-tJ-UJ0">
+                                    <font key="font" metaFont="systemSemibold" size="13"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cc6-xV-A1z">
+                                <rect key="frame" x="348" y="154" width="260" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Album" id="9re-W9-8hR">
+                                    <font key="font" metaFont="systemSemibold" size="13"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="yKp-wt-naz">
+                                <rect key="frame" x="350" y="127" width="256" height="22"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="gWX-tq-MB2">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="wXW-XK-hdz">
+                                <rect key="frame" x="348" y="46" width="147" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Genre" id="aGl-eD-S8Z">
+                                    <font key="font" metaFont="systemSemibold" size="13"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Jtq-DC-Fpn">
+                                <rect key="frame" x="348" y="16" width="148" height="25"/>
+                                <popUpButtonCell key="cell" type="push" title="-" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" tag="-1" imageScaling="proportionallyDown" inset="2" selectedItem="xME-wR-8N8" id="wUp-Nd-R4e">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="menu"/>
+                                    <menu key="menu" id="W5B-a0-xLH">
+                                        <items>
+                                            <menuItem title="-" state="on" tag="-1" id="xME-wR-8N8">
+                                                <modifierMask key="keyEquivalentModifierMask"/>
+                                            </menuItem>
+                                            <menuItem title="Blues" id="UHb-aZ-Dn7"/>
+                                            <menuItem title="Classic Rock" tag="1" id="06N-GI-8UT"/>
+                                            <menuItem title="Country" tag="2" id="e23-fY-vnm"/>
+                                            <menuItem title="Dance" tag="3" id="wj2-0x-PQq"/>
+                                            <menuItem title="Disco" tag="4" id="cdY-WY-zId"/>
+                                            <menuItem title="Funk" tag="5" id="IPB-Pl-99T"/>
+                                            <menuItem title="Grunge" tag="6" id="LHk-dv-Wt3"/>
+                                            <menuItem title="Hip Hop" tag="7" id="yT3-dG-IED"/>
+                                            <menuItem title="Jazz" tag="8" id="3gD-BS-bm0"/>
+                                            <menuItem title="Metal" tag="9" id="MsL-OH-9Dq"/>
+                                            <menuItem title="New Age" tag="10" id="1yb-HH-rkd"/>
+                                            <menuItem title="Oldies" tag="11" id="0I8-vw-1rY"/>
+                                            <menuItem title="Other" tag="12" id="fyD-aa-20u"/>
+                                            <menuItem title="Pop" tag="13" id="euN-gB-8e8"/>
+                                            <menuItem title="Rock &amp; Blues" tag="14" id="mzF-Vl-K72"/>
+                                            <menuItem title="Rap" tag="15" id="UZJ-mG-lEu"/>
+                                            <menuItem title="Reggae" tag="16" id="SHg-SQ-Cxg"/>
+                                            <menuItem title="Rock" tag="17" id="8Aw-np-Bec"/>
+                                            <menuItem title="Techno" tag="18" id="3v6-P7-glr"/>
+                                            <menuItem title="Industrial" tag="19" id="LSt-Po-L0o"/>
+                                            <menuItem title="Alternative" tag="20" id="zVo-od-Vae"/>
+                                            <menuItem title="Ska" tag="21" id="uAc-p1-yyh"/>
+                                            <menuItem title="Death Metal" tag="22" id="7at-pm-6vk"/>
+                                            <menuItem title="Pranks" tag="23" id="4Tx-ga-6DH"/>
+                                            <menuItem title="Soundtrack" tag="24" id="GAW-2p-g63"/>
+                                            <menuItem title="Euro Techno" tag="25" id="Kfq-o2-OHn"/>
+                                            <menuItem title="Ambient" tag="26" id="O9v-0O-01x"/>
+                                            <menuItem title="Trip Hop" tag="27" id="znP-qi-FCh"/>
+                                            <menuItem title="Vocal" tag="28" id="cLG-7Y-Stt"/>
+                                            <menuItem title="Jazz Funk" tag="29" id="5zh-Km-HEq"/>
+                                            <menuItem title="Fusion" tag="30" id="5I8-F6-iG0"/>
+                                            <menuItem title="Trance" tag="31" id="qgZ-co-ec4"/>
+                                            <menuItem title="Classical" tag="32" id="OYG-JV-plq"/>
+                                            <menuItem title="Instrumental" tag="33" id="aV4-so-e5d"/>
+                                            <menuItem title="Acid" tag="34" id="ueZ-R6-1lB"/>
+                                            <menuItem title="House" tag="35" id="y5Y-Eb-9fl"/>
+                                            <menuItem title="Game" tag="36" id="uj0-Tt-KwG"/>
+                                            <menuItem title="Soundclip" tag="37" id="X0C-gx-M8w"/>
+                                            <menuItem title="Gospel" tag="38" id="KCN-VE-R7K"/>
+                                            <menuItem title="Noise" tag="39" id="uyN-FU-ST4"/>
+                                            <menuItem title="Alternative Rock" tag="40" id="AoS-B3-Gxu"/>
+                                            <menuItem title="Bass" tag="41" id="Uz9-pA-ZlZ"/>
+                                            <menuItem title="Soul" tag="42" id="v71-He-fIg"/>
+                                            <menuItem title="Punk" tag="43" id="POe-fD-p5B"/>
+                                            <menuItem title="Space" tag="44" id="IZb-pW-1FB"/>
+                                            <menuItem title="Meditative" tag="45" id="1Wx-aU-JL3"/>
+                                            <menuItem title="Instrumental Pop" tag="46" id="jjv-pF-I3S"/>
+                                            <menuItem title="Instrumental Rock" tag="47" id="Zm4-w6-2G6"/>
+                                            <menuItem title="Ethnic" tag="48" id="eH6-Qf-33D"/>
+                                            <menuItem title="Gothic" tag="49" id="p95-N3-gyG"/>
+                                            <menuItem title="Darkwave" tag="50" id="Xt8-U2-vgd"/>
+                                            <menuItem title="Techno Industrial" tag="51" id="xD8-pk-kGb"/>
+                                            <menuItem title="Electronic" tag="52" id="itN-JT-UIf"/>
+                                            <menuItem title="Pop Folk" tag="53" id="FjE-7V-VV4"/>
+                                            <menuItem title="Eurodance" tag="54" id="e4L-7R-H6A"/>
+                                            <menuItem title="Dream" tag="55" id="d7C-Ik-xiJ"/>
+                                            <menuItem title="Southern Rock" tag="56" id="HSA-nH-vVd"/>
+                                            <menuItem title="Comedy" tag="57" id="O9k-kd-uHQ"/>
+                                            <menuItem title="Cult" tag="58" id="lU4-bw-UXK"/>
+                                            <menuItem title="Gansta" tag="59" id="Ves-B6-rid"/>
+                                            <menuItem title="Top 40" tag="60" id="dzJ-Qb-C1h"/>
+                                            <menuItem title="Christian Rap" tag="61" id="Tww-e1-n3b"/>
+                                            <menuItem title="Pop Funk" tag="62" id="FDu-2z-EMf"/>
+                                            <menuItem title="Jungle" tag="63" id="dai-cw-DPc"/>
+                                            <menuItem title="Native American" tag="64" id="zzQ-BB-JtO"/>
+                                            <menuItem title="Cabaret" tag="65" id="K0t-WZ-MAU"/>
+                                            <menuItem title="New wave" tag="66" id="HYI-ou-sXd"/>
+                                            <menuItem title="Psychadelic" tag="67" id="gmg-tG-n7T"/>
+                                            <menuItem title="Rave" tag="68" id="yOH-m0-C2c"/>
+                                            <menuItem title="Showtunes" tag="69" id="icK-P5-o8d"/>
+                                            <menuItem title="Trailer" tag="70" id="aub-T9-Fzd"/>
+                                            <menuItem title="LoFi" tag="71" id="hGj-LL-euq"/>
+                                            <menuItem title="Tribal" tag="72" id="CGR-cV-rZa"/>
+                                            <menuItem title="Acid Punk" tag="73" id="iHc-Kr-VkQ"/>
+                                            <menuItem title="Acid Jazz" tag="74" id="YyF-v1-NJH"/>
+                                            <menuItem title="Polka" tag="75" id="cgz-x0-J76"/>
+                                            <menuItem title="Retro" tag="76" id="kcE-ll-Tn7"/>
+                                            <menuItem title="Musical" tag="77" id="e4a-q2-jIZ"/>
+                                            <menuItem title="Rock and Roll" tag="78" id="3E6-sO-I85"/>
+                                            <menuItem title="Hard Rock" tag="79" id="B11-Tz-zx8"/>
+                                            <menuItem title="Remix" tag="80" id="ya3-Jp-Yiw"/>
+                                            <menuItem title="Cover" tag="81" id="Lnj-fb-xA4"/>
+                                        </items>
+                                    </menu>
+                                </popUpButtonCell>
+                            </popUpButton>
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="YcP-Va-zfQ">
+                                <rect key="frame" x="501" y="19" width="379" height="22"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="A0p-qY-KSk">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button translatesAutoresizingMaskIntoConstraints="NO" id="rM3-kH-N0D">
+                                <rect key="frame" x="15" y="19" width="315" height="315"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="315" id="ZYp-Ur-qZA"/>
+                                    <constraint firstAttribute="height" constant="315" id="zss-Ol-60b"/>
+                                </constraints>
+                                <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="Image" imagePosition="only" alignment="center" borderStyle="border" imageScaling="proportionallyUpOrDown" inset="2" id="snm-qC-G1B">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                            <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5y8-bk-0av">
+                                <rect key="frame" x="348" y="286" width="58" height="25"/>
+                                <popUpButtonCell key="cell" type="push" title="2.3" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="border" tag="3" inset="2" selectedItem="QK0-Fi-gVy" id="sKv-WB-wpR">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="menu"/>
+                                    <menu key="menu" id="Kxx-BI-Tez">
+                                        <items>
+                                            <menuItem title="2.3" state="on" tag="3" id="QK0-Fi-gVy"/>
+                                            <menuItem title="2.4" tag="4" id="A2P-Ht-uof"/>
+                                            <menuItem title="2.2" tag="2" id="k3C-lc-hZf"/>
+                                        </items>
+                                    </menu>
+                                </popUpButtonCell>
+                            </popUpButton>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fWK-Hy-PCR">
+                                <rect key="frame" x="348" y="100" width="33" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Year" id="EHu-ga-gOF">
+                                    <font key="font" metaFont="systemBold"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1WP-Tf-79i">
+                                <rect key="frame" x="350" y="73" width="95" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="95" id="pkJ-3W-g1f"/>
+                                </constraints>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="2WM-zr-Kfx">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <connections>
+                                    <outlet property="formatter" destination="4Zg-AU-bXG" id="QDk-g5-Rij"/>
+                                </connections>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Iv4-Wn-M7S">
+                                <rect key="frame" x="468" y="100" width="96" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Track position" id="hss-zA-nQJ">
+                                    <font key="font" metaFont="systemBold"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="KJh-Xw-KKM">
+                                <rect key="frame" x="470" y="73" width="95" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="95" id="gIn-vb-jqw"/>
+                                </constraints>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="ckj-Ml-UM1">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <connections>
+                                    <outlet property="formatter" destination="BOb-JA-AEj" id="v5D-Kj-7Nf"/>
+                                </connections>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="8yX-im-WQ1">
+                                <rect key="frame" x="573" y="72" width="17" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="of" id="fJm-Rm-WdQ">
+                                    <font key="font" metaFont="systemMedium" size="13"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fZg-cq-1YK">
+                                <rect key="frame" x="597" y="73" width="95" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="95" id="QFA-KB-NLu"/>
+                                </constraints>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="ghC-RN-kKp">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <connections>
+                                    <outlet property="formatter" destination="BOb-JA-AEj" id="lvX-we-Fwd"/>
+                                </connections>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2QJ-dU-wKN">
+                                <rect key="frame" x="426" y="293" width="456" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="No mp3 file selected" id="KkS-jK-LEt">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="pz8-W0-9ak">
+                                <rect key="frame" x="426" y="318" width="65" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="File name" id="0p9-S8-bFs">
+                                    <font key="font" metaFont="systemSemibold" size="13"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="BbT-H4-1Cy">
+                                <rect key="frame" x="625" y="127" width="255" height="22"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="oYS-Wl-IxB">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Uvh-jx-Ule">
+                                <rect key="frame" x="623" y="154" width="259" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Album Artist" id="sRB-Bk-Cu1">
+                                    <font key="font" metaFont="systemSemibold" size="13"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="cc6-xV-A1z" firstAttribute="leading" secondItem="KBI-AK-aSc" secondAttribute="leading" id="0Ct-qf-rFY"/>
+                            <constraint firstItem="Uvh-jx-Ule" firstAttribute="top" secondItem="tgm-CL-1Uo" secondAttribute="bottom" constant="10" id="0wR-TD-ZA2"/>
+                            <constraint firstItem="tgm-CL-1Uo" firstAttribute="top" secondItem="KBI-AK-aSc" secondAttribute="bottom" constant="5" id="1PK-9D-ims"/>
+                            <constraint firstItem="KBI-AK-aSc" firstAttribute="top" secondItem="DIC-4c-LPe" secondAttribute="bottom" constant="10" id="1ei-4T-ddI"/>
+                            <constraint firstItem="Iv4-Wn-M7S" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="fWK-Hy-PCR" secondAttribute="trailing" constant="25" id="1fT-w3-p97"/>
+                            <constraint firstItem="1WP-Tf-79i" firstAttribute="leading" secondItem="fWK-Hy-PCR" secondAttribute="leading" id="22D-tc-hVx"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="wXW-XK-hdz" secondAttribute="trailing" constant="20" symbolic="YES" id="45X-Eg-TQw"/>
+                            <constraint firstItem="fZg-cq-1YK" firstAttribute="top" secondItem="Iv4-Wn-M7S" secondAttribute="bottom" constant="5" id="59Q-If-p6G"/>
+                            <constraint firstItem="BbT-H4-1Cy" firstAttribute="leading" secondItem="yKp-wt-naz" secondAttribute="trailing" constant="19" id="5QJ-7o-fUa"/>
+                            <constraint firstItem="BbT-H4-1Cy" firstAttribute="trailing" secondItem="tgm-CL-1Uo" secondAttribute="trailing" id="5Z6-BH-NyW"/>
+                            <constraint firstItem="wtl-1R-ycl" firstAttribute="top" secondItem="5y8-bk-0av" secondAttribute="bottom" constant="10" id="6y2-wf-oCt"/>
+                            <constraint firstItem="Jtq-DC-Fpn" firstAttribute="leading" secondItem="wXW-XK-hdz" secondAttribute="leading" id="7qn-wS-AT6"/>
+                            <constraint firstItem="fWK-Hy-PCR" firstAttribute="leading" secondItem="yKp-wt-naz" secondAttribute="leading" id="8uy-Ms-hBf"/>
+                            <constraint firstItem="wtl-1R-ycl" firstAttribute="leading" secondItem="rM3-kH-N0D" secondAttribute="trailing" constant="20" id="ABQ-Nt-5FU"/>
+                            <constraint firstItem="Uvh-jx-Ule" firstAttribute="trailing" secondItem="BbT-H4-1Cy" secondAttribute="trailing" id="EKi-7A-TrE"/>
+                            <constraint firstItem="pz8-W0-9ak" firstAttribute="baseline" secondItem="UT8-Da-Rcj" secondAttribute="baseline" id="Kog-f2-Fwf"/>
+                            <constraint firstItem="UT8-Da-Rcj" firstAttribute="leading" secondItem="pz8-W0-9ak" secondAttribute="trailing" constant="-139" id="L7K-1N-IsF"/>
+                            <constraint firstItem="KBI-AK-aSc" firstAttribute="leading" secondItem="wtl-1R-ycl" secondAttribute="leading" id="O5P-gd-NXg"/>
+                            <constraint firstItem="Iv4-Wn-M7S" firstAttribute="top" secondItem="yKp-wt-naz" secondAttribute="bottom" constant="10" id="OVm-Zn-Lvz"/>
+                            <constraint firstItem="BbT-H4-1Cy" firstAttribute="width" secondItem="yKp-wt-naz" secondAttribute="width" id="OXD-J5-DI3"/>
+                            <constraint firstItem="YcP-Va-zfQ" firstAttribute="trailing" secondItem="BbT-H4-1Cy" secondAttribute="trailing" id="Oe6-id-SWU"/>
+                            <constraint firstItem="fWK-Hy-PCR" firstAttribute="top" secondItem="yKp-wt-naz" secondAttribute="bottom" constant="10" id="PY0-Pw-zHM"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Iv4-Wn-M7S" secondAttribute="trailing" constant="20" id="Qgk-oy-YNb"/>
+                            <constraint firstItem="KJh-Xw-KKM" firstAttribute="leading" secondItem="1WP-Tf-79i" secondAttribute="trailing" constant="25" id="RQ8-Iz-71B"/>
+                            <constraint firstItem="2QJ-dU-wKN" firstAttribute="leading" secondItem="pz8-W0-9ak" secondAttribute="leading" id="Rgs-jN-kHE"/>
+                            <constraint firstItem="2QJ-dU-wKN" firstAttribute="trailing" secondItem="DIC-4c-LPe" secondAttribute="trailing" id="Rkx-UU-90F"/>
+                            <constraint firstItem="yKp-wt-naz" firstAttribute="leading" secondItem="DIC-4c-LPe" secondAttribute="leading" id="UPh-bd-jss"/>
+                            <constraint firstItem="YcP-Va-zfQ" firstAttribute="top" secondItem="wXW-XK-hdz" secondAttribute="bottom" constant="5" id="VUG-WY-KAu"/>
+                            <constraint firstItem="Iv4-Wn-M7S" firstAttribute="leading" secondItem="1WP-Tf-79i" secondAttribute="trailing" constant="25" id="W4Z-OQ-jZh"/>
+                            <constraint firstItem="5y8-bk-0av" firstAttribute="leading" secondItem="UT8-Da-Rcj" secondAttribute="leading" id="X2j-RL-n6i"/>
+                            <constraint firstItem="8yX-im-WQ1" firstAttribute="top" secondItem="Iv4-Wn-M7S" secondAttribute="bottom" constant="11" id="XjS-Xi-g1V"/>
+                            <constraint firstItem="1WP-Tf-79i" firstAttribute="top" secondItem="fWK-Hy-PCR" secondAttribute="bottom" constant="5" id="Xko-zn-GLn"/>
+                            <constraint firstItem="YcP-Va-zfQ" firstAttribute="leading" secondItem="Jtq-DC-Fpn" secondAttribute="trailing" constant="8" id="Xwb-LU-3rk"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="5y8-bk-0av" secondAttribute="trailing" constant="20" symbolic="YES" id="Znp-QV-TTG"/>
+                            <constraint firstItem="cc6-xV-A1z" firstAttribute="top" secondItem="tgm-CL-1Uo" secondAttribute="bottom" constant="10" id="aKe-D2-xS3"/>
+                            <constraint firstItem="DIC-4c-LPe" firstAttribute="top" secondItem="wtl-1R-ycl" secondAttribute="bottom" constant="5" id="buP-YY-RI7"/>
+                            <constraint firstItem="wXW-XK-hdz" firstAttribute="leading" secondItem="wtl-1R-ycl" secondAttribute="leading" id="c2L-zr-yM8"/>
+                            <constraint firstItem="Jtq-DC-Fpn" firstAttribute="top" secondItem="wXW-XK-hdz" secondAttribute="bottom" constant="6" id="e0N-Et-zZS"/>
+                            <constraint firstAttribute="trailing" secondItem="DIC-4c-LPe" secondAttribute="trailing" constant="20" id="eD3-ml-h5n"/>
+                            <constraint firstItem="5y8-bk-0av" firstAttribute="top" secondItem="UT8-Da-Rcj" secondAttribute="bottom" constant="8" id="eMs-ll-LiJ"/>
+                            <constraint firstItem="KJh-Xw-KKM" firstAttribute="leading" secondItem="Iv4-Wn-M7S" secondAttribute="leading" id="g1t-nO-FrV"/>
+                            <constraint firstItem="rM3-kH-N0D" firstAttribute="top" secondItem="UT8-Da-Rcj" secondAttribute="bottom" constant="-16" id="hPq-1w-6QZ"/>
+                            <constraint firstItem="rM3-kH-N0D" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="15" id="hXF-4W-HKP"/>
+                            <constraint firstItem="8yX-im-WQ1" firstAttribute="leading" secondItem="KJh-Xw-KKM" secondAttribute="trailing" constant="10" id="iaA-Y0-NZW"/>
+                            <constraint firstItem="Uvh-jx-Ule" firstAttribute="leading" secondItem="BbT-H4-1Cy" secondAttribute="leading" id="imp-UV-Ngp"/>
+                            <constraint firstItem="Uvh-jx-Ule" firstAttribute="bottom" secondItem="cc6-xV-A1z" secondAttribute="bottom" id="lGo-9s-kNZ"/>
+                            <constraint firstItem="wXW-XK-hdz" firstAttribute="top" secondItem="1WP-Tf-79i" secondAttribute="bottom" constant="10" id="lgL-7A-Uwh"/>
+                            <constraint firstItem="KBI-AK-aSc" firstAttribute="trailing" secondItem="wtl-1R-ycl" secondAttribute="trailing" id="m8H-Sq-u4j"/>
+                            <constraint firstItem="UT8-Da-Rcj" firstAttribute="leading" secondItem="rM3-kH-N0D" secondAttribute="trailing" constant="20" id="m97-sI-gf9"/>
+                            <constraint firstItem="2QJ-dU-wKN" firstAttribute="top" secondItem="pz8-W0-9ak" secondAttribute="bottom" constant="8" id="mgp-NK-0Dx"/>
+                            <constraint firstItem="BbT-H4-1Cy" firstAttribute="top" secondItem="Uvh-jx-Ule" secondAttribute="bottom" constant="5" id="n3P-O2-H65"/>
+                            <constraint firstItem="KJh-Xw-KKM" firstAttribute="top" secondItem="Iv4-Wn-M7S" secondAttribute="bottom" constant="5" id="p9O-wa-HNg"/>
+                            <constraint firstItem="UT8-Da-Rcj" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="qSg-Xs-9HU"/>
+                            <constraint firstItem="tgm-CL-1Uo" firstAttribute="leading" secondItem="DIC-4c-LPe" secondAttribute="leading" id="qnT-tm-wLv"/>
+                            <constraint firstAttribute="trailing" secondItem="UT8-Da-Rcj" secondAttribute="trailing" constant="20" id="uvA-3W-wDB"/>
+                            <constraint firstItem="DIC-4c-LPe" firstAttribute="leading" secondItem="rM3-kH-N0D" secondAttribute="trailing" constant="20" id="vP3-ob-dQM"/>
+                            <constraint firstItem="fZg-cq-1YK" firstAttribute="leading" secondItem="8yX-im-WQ1" secondAttribute="trailing" constant="9" id="w0o-iA-XU4"/>
+                            <constraint firstAttribute="trailing" secondItem="wtl-1R-ycl" secondAttribute="trailing" constant="20" id="yC4-mb-UZe"/>
+                            <constraint firstItem="rM3-kH-N0D" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="21" id="yCg-8i-YQp"/>
+                            <constraint firstItem="cc6-xV-A1z" firstAttribute="trailing" secondItem="yKp-wt-naz" secondAttribute="trailing" id="yEi-Ph-73b"/>
+                            <constraint firstItem="wXW-XK-hdz" firstAttribute="width" secondItem="Jtq-DC-Fpn" secondAttribute="width" id="yRp-16-N62"/>
+                            <constraint firstItem="yKp-wt-naz" firstAttribute="top" secondItem="cc6-xV-A1z" secondAttribute="bottom" constant="5" id="ynV-IY-XPI"/>
+                            <constraint firstItem="BbT-H4-1Cy" firstAttribute="bottom" secondItem="yKp-wt-naz" secondAttribute="bottom" id="ypl-UX-YRw"/>
+                            <constraint firstItem="tgm-CL-1Uo" firstAttribute="trailing" secondItem="DIC-4c-LPe" secondAttribute="trailing" id="ypn-mY-l9B"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="albumArtistField" destination="BbT-H4-1Cy" id="kgY-uf-7N6"/>
+                        <outlet property="albumTextField" destination="yKp-wt-naz" id="9np-3m-4zI"/>
+                        <outlet property="artistTextField" destination="tgm-CL-1Uo" id="1Kc-v6-9y0"/>
+                        <outlet property="fileNameLabel" destination="2QJ-dU-wKN" id="7Bq-Sh-2S9"/>
+                        <outlet property="genreDescriptionTextField" destination="YcP-Va-zfQ" id="EGG-yU-ovD"/>
+                        <outlet property="genrePopUpMenu" destination="Jtq-DC-Fpn" id="0bt-Dh-tyQ"/>
+                        <outlet property="imageSelectionButton" destination="rM3-kH-N0D" id="CBg-em-Mnv"/>
+                        <outlet property="titleTextField" destination="DIC-4c-LPe" id="458-ur-rYx"/>
+                        <outlet property="totalTracksTextField" destination="fZg-cq-1YK" id="Ok9-vS-VmB"/>
+                        <outlet property="trackPositionTextField" destination="KJh-Xw-KKM" id="uDh-bI-4Sv"/>
+                        <outlet property="versionPopUpbutton" destination="5y8-bk-0av" id="VSR-Vv-Yfn"/>
+                        <outlet property="yearTextField" destination="1WP-Tf-79i" id="3Bb-aq-IqM"/>
+                    </connections>
+                </viewController>
+                <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <customObject id="BOb-JA-AEj" customClass="OnlyNumberOrEmptyFormatter" customModule="Mp3ID3Tagger" customModuleProvider="target"/>
+                <customObject id="4Zg-AU-bXG" customClass="YearFormatter" customModule="Mp3ID3Tagger" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="86" y="881.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Image" width="144" height="144"/>
+    </resources>
+</document>
